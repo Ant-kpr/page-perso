@@ -65,7 +65,7 @@ section {
   padding: var(--espace-1);
 }
 
-.grille-sections {
+.grille-sections{
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--espace-2);
@@ -90,6 +90,10 @@ footer {
   text-align: center;
   padding: var(--espace-3);
 }
+a{
+  color: var(--couleur-texte);
+}
+
 @media (min-width: 768px) {
   body {
     max-width: 1100px;

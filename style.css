@@ -1,0 +1,169 @@
+:root {
+  --couleur-texte: #f5fff5;
+  --couleur-sous-text: #ffffff;
+  --couleur-autre: #140c0c;
+  --couleur-lien: #f0c9c9;
+  --couleur-back: #2f312e;
+
+  --espace-1: 0.25rem;
+  --espace-2: 0.5rem;
+  --espace-3: 1rem;
+  --espace-4: 1.5rem;
+  --espace-5: 5.5rem;
+
+  --texte-petit: 0.875rem;
+  --texte-normal: 1rem;
+  --texte-grand: 1.25rem;
+  --texte-titre: 2rem;
+}
+
+.mes-liens a {
+  display: block;
+  margin-bottom: 10px; /* Ajoute un petit espace entre chaque lien */
+}
+
+body {
+  background-color: var(--couleur-back);
+  color: var(--couleur-texte);
+  margin: 0;
+  padding: var(--espace-3);
+  font-size: var(--texte-normal);
+}
+footer a{
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  color: var(--couleur-texte);
+}
+
+h2 {
+  color: var(--couleur-texte);
+}
+
+p {
+  color: var(--couleur-sous-text);
+}
+
+.entete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espace-3);
+  padding-bottom: var(--espace-4);
+}
+
+img {
+  height: var(--espace-5);
+  filter: brightness(0) invert(1)
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espace-2);
+}
+
+.menu a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--espace-2);
+  color: var(--couleur-lien);
+  text-decoration: none;
+}
+
+.menu img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espace-3);
+}
+
+section {
+  margin-bottom: var(--espace-1);
+  padding: var(--espace-3);
+}
+
+#presentation {
+  border: 2px solid var(--couleur-texte);
+}
+
+#competences {
+  border: 2px solid var(--couleur-texte);
+}
+
+#projets {
+  border: 2px solid var(--couleur-texte);
+}
+
+#contact {
+  border: 2px solid var(--couleur-texte);
+}
+
+form {
+  color: var(--couleur-texte);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-2);
+}
+
+button {
+  margin-top: var(--espace-3);
+  color: var(--couleur-autre);
+}
+
+footer {
+  text-align: center;
+  padding: var(--espace-3);
+}
+
+a {
+  color: var(--couleur-texte);
+}
+
+@media (min-width: 768px) {
+
+  body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--espace-4);
+  }
+
+  .entete {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: var(--espace-3);
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  #presentation {
+    grid-row: span 2;
+  }
+
+  #contact {
+    grid-column: 1 / -1;
+  }
+
+  #contact form {
+    max-width: 500px;
+  }
+}
